@@ -1,12 +1,21 @@
+name: escuela
 channels:
   - conda-forge
-
+  - defaults
 dependencies:
-  - jupyterhub-singleuser>=3.0,<4.0
-
-  # Everyone wants to use nbgitpuller for everything, so let's do that
-  - nbgitpuller=1.1.*
+  # :thinking:
+  #- jupyterhub-singleuser>=3.0,<4.0
   # Install packages from pip
   - pip
-  - pip:
-    - otter-grader
+
+  - python=3.12
+  - torchgeo
+  - gdown
+  - opencv
+  - ipython
+  - ipykernel
+  - fastparquet
+  - scikit-learn
+  - tensorflow-gpu
+  - pydot
+  - rasterio
