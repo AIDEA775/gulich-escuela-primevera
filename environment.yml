@@ -16,6 +16,6 @@ dependencies:
   - ipykernel
   - fastparquet
   - scikit-learn
-  - tensorflow-gpu
+  #- tensorflow-gpu
   - pydot
   - rasterio
