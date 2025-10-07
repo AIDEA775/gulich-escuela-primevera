@@ -23,6 +23,10 @@ jobs:
     - name: Checkout files in repo
       uses: actions/checkout@main
 
+    - name: Test docker login
+      run: |
+        echo "${{ secrets.QUAY_PASSWORD }}" | docker login quay.io -u "${{ secrets.QUAY_USERNAME }}" --password-stdin
+
     - name: Build and push the image to quay.io
       uses: jupyterhub/repo2docker-action@master
       with:
